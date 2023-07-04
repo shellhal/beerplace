@@ -1,13 +1,419 @@
-body {
+/* ------------ Basics ----------------- */
+/* ------------------------------------- */
+/*
+Color refs:
+Grey:       #a9a790
+LightBlue:  #abd7f2
+Yellow:     #eac91a
+MedBlue:    #6c87ce
+Brown:      #914d1e
+LightGreen: #b0b537
+Orange:     #da6901
+Pinkish:    #d4ac92
+DarkGreen:  #036a23
+*/
+html, body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+/*  background-color: #1a214f !important;*/
+  background-color: white !important;
+  color: black !important;
+  font-family: 'Kameron', serif !important;
+/*  font-family: "Helvetica", "Helvetica", monospace !important;*/
+  /*font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+    sans-serif;*/
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+h1, h2, h3, .navbar {
+  font-family: 'Kameron';
+}
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  /*font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;*/
+}
+.logo {
+  max-width: 100px;
+}
+.blue-background {
+  background: #abd7f2;
+}
+.navbar {
+/*  margin: 0px 15px;*/
+  min-height: 30px;
+/*  background: url('./img/banner.png');*/
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top right;
+  background: none;
+
+}
+.my-nav-link, .beerplace-brand-nav {
+  color: black !important;
+  font-size: 20px;
+  margin-left: 20px;
+  margin-right: 10px;
+  text-decoration: none;
+}
+.small-link {
+  margin-left: 0px;
+  margin-bottom:0px;
+  margin-top: 0px;
+  margin-right: 10px;
+}
+
+.app-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+.hidden {
+  display: none;
+}
+
+.footer {
+  min-height: 40px;
+  padding: 20px;
+  background-color: #ddd;
+}
+
+.my-btn {
+  padding: 10px 20px;
+  border-radius: 30px;
+  background: none;
+  font-size: 18px;
+  color: black;
+  border: 2px solid black;
+  min-width: 200px;
+}
+.my-button:disabled,
+.my-button[disabled] {
+  color: grey;
+}
+.section-wrapper {
+  width: 100%;
+  padding: 20px;
+  margin: auto;
+}
+.black-hidden-link {
+  color: black !important;
+  text-decoration: none !important;
+} 
+.black-hidden-link:hover {
+  text-decoration: none !important;
+}
+
+.icon-sm {
+  width: 20px;
+  margin: 0;
+}
+.icon-md {
+  width: 30px;
+  margin: 0;
+}
+.icon-lg {
+  width: 40px;
+  margin-top: 5px;
+}
+.icon-xlg {
+
+  width: 55px;
+  margin-bottom: 5px;
+/*  margin: 0;*/
+}
+
+.icon-sm, .icon-md, .icon-lg, .icon-xlg {
+/*    filter: invert(100%);
+  -webkit-filter: invert(100%);*/
+}
+
+/* ------------ Home ------------------ */
+/* ------------------------------------- */
+.home-page {
+  width: 100%;
+}
+.section-one {
+/*  background: #abd7f2; */
+  background-image: url('./img/evan_fall.png');
+  min-height: 650px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top left;
+}
+.section-two {
+/*  background: white; */
+}
+
+.section-four {
+/*  background: whit/e;*/
+  max-width: 900px;
+}
+.about-title-wrapper {
+  text-align: left;
+  padding-bottom: 10px;
+  max-width: 30vw;
+  margin-bottom: 10px;
+  border-bottom: 2px solid black;
+}
+.about-hours-wrapper {
+  display: flex;
+  max-width: 900px;
+  margin: 20px auto;
+}
+.hours-wrapper {
+  margin: 20px;
+  min-width: 200px;
+  max-width: 200px;
+  max-height: 240px;
+  font-size: 18px;
+  flex-grow: 1;
+  padding: 20px;
+  border: 1px solid black;
+}
+.hours-title {
+  font-weight: bold;
+}
+.hours-body {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-wrapper {
+  flex-grow: 2;
+}
+.socials-bar {
+  display: flex;
+  margin: 20px auto;
+  width: 90%;
+  justify-content: space-around;
+}
+.bar {
+  flex-grow: 2;
+  height: 23px;
+  border-bottom: 2px solid black;
+}
+.social-icons {
+  min-width: 20vw;
+  flex-grow: 1;
+  display: flex;
+  gap: 15px;
+  justify-content: space-around;
+}
+
+
+.img-two-wrapper, .about-wrapper {
+  flex-grow: 1;
+}
+.about-wrapper {
+  padding: 20px;
+}
+
+
+
+.beerplace-main-info {
+  position: absolute;
+  background: rgba(255,255,255,1);
+  padding: 20px;
+  margin-top: 100px;
+  margin-left: 50px;
+}
+
+.section-three {
+  /*  background: #b0b537;*/
+  display: flex;
+  justify-content: space-around;
+  max-width: 900px;
+  /*  flex-wrap: wrap;*/
+}
+.img-button-combo {
+  padding: 10px;
+  margin: 20px;
+}
+.square-main-pic {
+  max-width: 40vw;
+  padding: 10px;
+}
+.becca-beer-pic {
+}
+.main-img-button-outer-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.img-btn-combo-btn {
+  margin: 5px auto;
+}
+.about-text {
+  max-width: 900px;
+  margin: auto;
+}
+
+.instas-wrapper {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+  flex-wrap: wrap;
+  max-width: 900px;
+  margin: 10px auto;
+}
+.insta-post {
+  width: 15vw;
+  height: 15vw;
+  background: #ccc;
+  margin:10px;
+}
+.insta-post:hover{
+  background-color: #888;
+}
+.img-button-combo-text {
+  margin: 10px 30px;
+/*  color: grey;*/
+/*  font-size: small;*/
+}
+
+/* ------------ Contact ---------------- */
+/* ------------------------------------- */
+.contact-wrapper {
+  margin: 20px 40px;
+  padding: 30px;
+  border-radius: 30px;
+  max-width: 900px;
+  margin: auto;
+}
+.my-input {
+  border: 1px solid grey !important;
+}
+.large-input  {
+  height: 200px;
+}
+
+.first-last-name-form-wrapper {
+  display: flex;
+  gap: 20px;
+}
+.name-field {
+  min-width: 30vw;
+}
+.static-contact-info {
+  font-size: 18px;
+  margin: 20px 0;
+}
+.submit {
+  background-color: #6c87ce !important;
+  color: white !important;
+  max-width: 150px !important;
+  margin: 10px 0px;
+
+}
+/* ------------ Events ----------------- */
+/* ------------------------------------- */
+.events-page-wrapper {
+  padding: 10px 10vw;
+}
+.event-object-wrapper {
+  display: flex;
+  justify-content: space-around;
+  padding: 15px;
+  background: white;
+  border-radius: 30px;
+  margin-bottom: 20px;
+}
+.event-object-side {
+  margin: 10px;
+  flex-grow: 1;
+  width: 50%;
+}
+.events-wrapper {
+  max-width: 900px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  width: 100%;
+}
+.event-object-wrapper {
+  padding: 20px;
+  margin:auto;
+  width: 700px;
+  max-width: 90vw;
+}
+.event-title {
+
+}
+.event-when {
+  color: grey;
+  margin: 10px 0px;
+}
+.event-text {
+  max-width: 400px;
+  overflow-wrap: break-word;
+}
+.event-image {
+  max-width: 400px;
+}
+.event-image-img{
+  max-width: 300px;
+}
+.events-bars-wrapper {
+  display: flex;
+  margin: 10px;
+}
+.events-page-title {
+  margin: 0px 20px;
+  display: flex;
+  justify-content: space-around;
+}
+.trivia-crowd-background {
+  background-image: url('./img/trivia_crowd.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center right;
+  min-height:500px;
+  width: 100vw;
+}
+
+/*mobile*/
+@media only screen and (max-width: 750px) {
+  .event-object-wrapper {
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+  }
+  .event-object-side {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .event-image-img {
+    max-width: 70vw;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .section-three {
+    flex-wrap: wrap;
+  }
+  .section-three img {
+    max-width: 90%;
+    margin: auto;
+  }
+  .about-hours-wrapper { 
+    flex-wrap: wrap;
+  }
+  .about-wrapper {
+    max-width: 80vw;
+    margin: auto;
+  }
+  .hours-wrapper {
+    margin: auto;
+    max-width: 75vw;
+  }
+  .img-button-combo {
+    display: flex;
+    flex-direction: column;
+  }
 }
